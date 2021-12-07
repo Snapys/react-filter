@@ -1,0 +1,48 @@
+.button {
+  display: inline-block;
+  transition: ease all 300ms;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  background: rgb(87, 54, 94);
+  background: linear-gradient(
+    36deg,
+    rgba(87, 54, 94, 1) 0%,
+    rgba(137, 91, 147, 1) 49%,
+    rgba(137, 91, 147, 1) 100%
+  );
+  background-size: 200%;
+  background-position: left;
+
+  &.active {
+    background: rgb(57, 51, 84);
+    background: linear-gradient(
+      43deg,
+      rgba(57, 51, 84, 1) 0%,
+      rgba(73, 65, 110, 1) 49%,
+      rgba(132, 122, 180, 1) 100%
+    );
+  }
+
+  &:hover {
+    background-position: right;
+  }
+}
+
+.button.active {
+  background: rgb(57, 51, 84);
+  background: linear-gradient(
+    43deg,
+    rgba(57, 51, 84, 1) 0%,
+    rgba(73, 65, 110, 1) 49%,
+    rgba(132, 122, 180, 1) 100%
+  );
+}

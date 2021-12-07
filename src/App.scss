@@ -1,0 +1,169 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #b3b3b3;
+  padding: 1rem 0;
+}
+
+.module-type-filter__container {
+  button {
+    grid-column: span 4;
+
+    @media screen and (min-width: 340px) {
+      grid-column: span 2;
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-column: span 3;
+    }
+
+    @media screen and (min-width: 992px) {
+      grid-column: span 2;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  flex: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.module-list__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 1/-1;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.75);
+
+  .module-list__options {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    background: #c1c1c1;
+    border-radius: 0.8rem 0.8rem 0 0;
+
+    li {
+      grid-column: span 4;
+
+      @media screen and (min-width: 340px) {
+        grid-column: span 2;
+      }
+
+      @media screen and (min-width: 768px) {
+        grid-column: span 3;
+      }
+
+      @media screen and (min-width: 992px) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .module-list__items {
+    flex: 1;
+
+    p {
+      margin: 1rem;
+      @media screen and (min-width: 768px) {
+        margin: 0.625rem;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+
+      li {
+        margin: 0.8rem 0;
+        padding: 0.4rem 1.5rem;
+        background: #895b95;
+        border-radius: 0.6rem;
+        color: #fff;
+        min-width: 5rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .module-list__user-menu {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+
+    li {
+      width: 100%;
+
+      @media screen and (min-width: 465px) {
+        width: auto;
+      }
+      button {
+        float: right;
+        border: none;
+        padding: 0.7rem 1.4rem;
+        border-radius: 0.6rem;
+        color: #fff;
+        cursor: pointer;
+        transition: ease all 300ms;
+
+        &.delete {
+          background: #e94745;
+
+          &:hover {
+            background: darken(#e94745, 10%);
+          }
+        }
+        &.advice {
+          background: #e9c978;
+          &:hover {
+            background: darken(#e9c978, 10%);
+          }
+        }
+        &.create {
+          background: #fa9a9a;
+          &:hover {
+            background: darken(#fa9a9a, 10%);
+          }
+        }
+        &.submit {
+          background: #75ceba;
+          &:hover {
+            background: darken(#75ceba, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #b3b3b3;
+  padding: 0.8rem;
+
+  p {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+button {
+  &.active {
+    background: rgb(57, 51, 84);
+    background: linear-gradient(
+      43deg,
+      rgba(57, 51, 84, 1) 0%,
+      rgba(73, 65, 110, 1) 49%,
+      rgba(132, 122, 180, 1) 100%
+    );
+  }
+}
